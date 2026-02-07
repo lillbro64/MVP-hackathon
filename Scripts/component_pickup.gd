@@ -16,8 +16,17 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	if player_carry:
+		if component_data not in ComponentTracker.component_stack:
+			queue_free()
 		self.global_position = (player_node.global_position - Vector2(0,16 + (8 * (in_stack - 1))))
+	if ComponentTracker.stack_changed:
+		restack()
+	
 
+func restack():
+	in_stack = ComponentTracker.component_stack.find(component_data) + 1
+	await get_tree().process_frame
+	ComponentTracker.stack_changed = false
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):

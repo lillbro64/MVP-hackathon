@@ -5,6 +5,7 @@ var s_bar
 var s_timer
 var cauldron
 
+var can_cauldron = false
 var can_move = true
 var dir
 var moving = false
@@ -29,10 +30,11 @@ func _physics_process(_delta: float) -> void:
 			can_move = true
 	else:
 		if Input.is_action_just_pressed("space"):
-			$AnimatedSprite2D/Camera2D/UIHandler/CauldronUI.global_position = self.global_position
-			$AnimatedSprite2D/Camera2D/UIHandler/CauldronUI.visible = true
-			$AnimatedSprite2D/Camera2D/UIHandler/CauldronUI.create_components()
-			can_move = false
+			if can_cauldron:
+				$AnimatedSprite2D/Camera2D/UIHandler/CauldronUI.global_position = self.global_position
+				$AnimatedSprite2D/Camera2D/UIHandler/CauldronUI.visible = true
+				$AnimatedSprite2D/Camera2D/UIHandler/CauldronUI.create_components()
+				can_move = false
 		if Input.is_action_pressed("run"):
 			if !s_cooldown:
 				s_regen = false

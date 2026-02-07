@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://b34hwsivqbdp" path="res://PlaceholderAssets/Visuals/CoralChunk2.png" id="2_auism"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0m7cd"]
-radius = 3.1622777
+radius = 7.0
 
 [node name="Component" type="Area2D" unique_id=846461734]
 script = ExtResource("1_1l2aw")

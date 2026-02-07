@@ -41,6 +41,7 @@ func update_potion_info():
 		i.queue_free()
 	for i in ComponentTracker.potion_inventory:
 		var instance = info_box.instantiate()
+		instance.potion = i
 		instance.get_node("TextureRect").texture = load(i.sprite)
 		#instance.TextureRect.texture = load(i.sprite)
 		instance.get_node("TextureRect/Control/NameLabel").text = i.name
@@ -48,10 +49,11 @@ func update_potion_info():
 		$Control/ColorRect/VBoxContainer.add_child.call_deferred(instance)
 
 func _on_button_pressed() -> void:
-	PotionBrewer.calculate_brew(component_storage)
-	prints(str(component_storage))
-	for i in comp_nodes:
-		i.queue_free()
+	if !component_storage.is_empty():
+		PotionBrewer.calculate_brew(component_storage)
+		prints(str(component_storage))
+		for i in comp_nodes:
+			i.queue_free()
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:

@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://bn6bgp7htt2l5" path="res://Scenes/cauldron_ui.tscn" id="3_6t5aa"]
 [ext_resource type="Texture2D" uid="uid://bnks7eo63o30f" path="res://Sprites/Wizard/Wizard Walk Left.png" id="4_8erm5"]
 [ext_resource type="Texture2D" uid="uid://b0dvf45oi1p84" path="res://Sprites/Wizard/Wizard Walk Right.png" id="5_f1ek2"]
+[ext_resource type="Script" uid="uid://bytk6bweq2gk" path="res://Scenes/ui_handler.gd" id="6_8erm5"]
+[ext_resource type="FontFile" uid="uid://cl6ww3fr48to3" path="res://Miscellaneous/Pixeled.ttf" id="8_8erm5"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tx1dd"]
 atlas = ExtResource("2_x3wgy")
@@ -175,7 +177,8 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_onrkg"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x3wgy"]
+size = Vector2(12, 6.5)
 
 [node name="Player" type="CharacterBody2D" unique_id=1289873781]
 script = ExtResource("1_onrkg")
@@ -189,10 +192,12 @@ centered = false
 position = Vector2(8, 8)
 
 [node name="UIHandler" type="Control" parent="AnimatedSprite2D/Camera2D" unique_id=1893099968]
+z_index = 100
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+script = ExtResource("6_8erm5")
 
 [node name="ColorRect" type="ColorRect" parent="AnimatedSprite2D/Camera2D/UIHandler" unique_id=1116446230]
 layout_mode = 0
@@ -223,8 +228,43 @@ offset_bottom = -40.0
 [node name="CanvasLayer" parent="AnimatedSprite2D/Camera2D/UIHandler/CauldronUI" index="2" unique_id=601199690]
 visible = false
 
+[node name="RichTextLabel" type="RichTextLabel" parent="AnimatedSprite2D/Camera2D/UIHandler" unique_id=2132043706]
+layout_mode = 0
+offset_left = -137.0
+offset_top = -98.0
+offset_right = -27.0
+offset_bottom = -74.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/normal_font = ExtResource("8_8erm5")
+theme_override_font_sizes/normal_font_size = 10
+text = " Value: 0"
+scroll_active = false
+autowrap_mode = 0
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="AnimatedSprite2D/Camera2D/UIHandler" unique_id=907626619]
+layout_mode = 0
+offset_left = 33.0
+offset_top = -98.0
+offset_right = 134.0
+offset_bottom = -74.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/normal_font = ExtResource("8_8erm5")
+theme_override_font_sizes/normal_font_size = 10
+text = "Time: 000"
+scroll_active = false
+autowrap_mode = 0
+horizontal_alignment = 2
+
+[node name="Timer" type="Timer" parent="AnimatedSprite2D/Camera2D/UIHandler" unique_id=1018369863]
+wait_time = 20.0
+one_shot = true
+autostart = true
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1967057914]
-shape = SubResource("CircleShape2D_onrkg")
+position = Vector2(0, 8.25)
+shape = SubResource("RectangleShape2D_x3wgy")
 
 [connection signal="timeout" from="AnimatedSprite2D/Camera2D/UIHandler/StamTimer" to="." method="_on_stam_timer_timeout"]
 

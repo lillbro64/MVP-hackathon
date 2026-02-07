@@ -89,4 +89,6 @@ func calculate_brew(components: Array[Component]):
 		if i.special_impact != "":
 			effects.append(i.special_impact)
 		ComponentTracker.component_stack.remove_at(ComponentTracker.component_stack.find(i))
+		ComponentTracker.component_total -= 1
+	ComponentTracker.stack_changed = true
 	effect_handling()

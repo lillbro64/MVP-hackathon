@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Component" format=3 uid="uid://qbt4eegpuq5c"]
+
+[ext_resource type="Script" uid="uid://ccvmdj7sxgwwy" path="res://Components/base_component.gd" id="1_et1wq"]
+
+[resource]
+script = ExtResource("1_et1wq")
+sprite = "res://Sprites/Components/Leaf.png"
+value = 2
+potion_impact = 0.4
+metadata/_custom_type_script = "uid://ccvmdj7sxgwwy"
