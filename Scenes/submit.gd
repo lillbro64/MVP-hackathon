@@ -17,6 +17,7 @@ func _on_body_entered(body: Node2D) -> void:
 			body.find_child("Timer", true, false).paused = true
 			await get_tree().process_frame
 			body.find_child("RichTextLabel2", true, false).text = "You win! :)"
+			ComponentTracker.has_won = true
 			if ComponentTracker.player_value > Saver.SaveFile.high_score:
 				Saver.SaveFile.high_score = ComponentTracker.player_value
 				Saver._save()

@@ -11,6 +11,7 @@ func _process(_delta: float) -> void:
 	if !$Timer.paused:
 		$RichTextLabel.text = " Value: " + str(ComponentTracker.player_value)
 		$RichTextLabel2.text = "Time: " + str(int($Timer.get_time_left()))
-		if int($Timer.get_time_left()) <= 0:
+		if $Timer.get_time_left() <= 0:
 			$RichTextLabel2.text = "You lose :("
+			ComponentTracker.has_lost = true
 	
