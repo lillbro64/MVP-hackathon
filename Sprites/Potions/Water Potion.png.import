@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dvwoc440dulje"
-path="res://.godot/imported/GBSabelOverworld1-export.png-f6062194afa67f22edad04b7f2637c86.ctex"
+uid="uid://cf10pcp5726wn"
+path="res://.godot/imported/Water Potion.png-92532392ce7ca8836b5fc369cf3e73f2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://PlaceholderAssets/Visuals/GBSabelOverworld1-export.png"
-dest_files=["res://.godot/imported/GBSabelOverworld1-export.png-f6062194afa67f22edad04b7f2637c86.ctex"]
+source_file="res://Sprites/Potions/Water Potion.png"
+dest_files=["res://.godot/imported/Water Potion.png-92532392ce7ca8836b5fc369cf3e73f2.ctex"]
 
 [params]
 

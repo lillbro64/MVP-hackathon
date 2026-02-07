@@ -202,3 +202,4 @@ position = Vector2(-42, 29)
 component_data = ExtResource("4_kwrm5")
 
 [editable path="Player"]
+[editable path="Player/AnimatedSprite2D/Camera2D/UIHandler/CauldronUI"]
