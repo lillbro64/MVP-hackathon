@@ -6,14 +6,24 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_jmrt5"]
 radius = 4.1231055
 
-[node name="CauldComponent" type="Sprite2D" unique_id=26576875]
-texture = ExtResource("1_xksdv")
+[sub_resource type="CircleShape2D" id="CircleShape2D_sfi5c"]
+radius = 3.1622777
+
+[node name="CauldComponent" type="CharacterBody2D" unique_id=274748752 groups=["c-components"]]
 script = ExtResource("2_jmrt5")
 
-[node name="Area2D" type="Area2D" parent="." unique_id=1591860106]
+[node name="Sprite" type="Sprite2D" parent="." unique_id=26576875 groups=["c-components"]]
+z_index = 10
+texture = ExtResource("1_xksdv")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1518816384]
+[node name="Area2D" type="Area2D" parent="Sprite" unique_id=1591860106]
+z_index = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite/Area2D" unique_id=1518816384]
 shape = SubResource("CircleShape2D_jmrt5")
 
-[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
-[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=250257017]
+shape = SubResource("CircleShape2D_sfi5c")
+
+[connection signal="mouse_entered" from="Sprite/Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Sprite/Area2D" to="." method="_on_area_2d_mouse_exited"]

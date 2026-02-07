@@ -29,7 +29,7 @@ func _physics_process(_delta: float) -> void:
 			can_move = true
 	else:
 		if Input.is_action_just_pressed("space"):
-			$AnimatedSprite2D/Camera2D/UIHandler/CauldronUI/Control.global_position = self.global_position
+			$AnimatedSprite2D/Camera2D/UIHandler/CauldronUI.global_position = self.global_position
 			$AnimatedSprite2D/Camera2D/UIHandler/CauldronUI.visible = true
 			$AnimatedSprite2D/Camera2D/UIHandler/CauldronUI.create_components()
 			can_move = false

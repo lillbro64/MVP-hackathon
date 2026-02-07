@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ci48ejkvoh8v"
-path="res://.godot/imported/placeholder.png-7627034f1270dc506da91a2e2c9ef774.ctex"
+uid="uid://b0dvf45oi1p84"
+path="res://.godot/imported/Wizard Walk Right.png-a597d3b9ae91ed9da1171518525c3eff.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/placeholder.png"
-dest_files=["res://.godot/imported/placeholder.png-7627034f1270dc506da91a2e2c9ef774.ctex"]
+source_file="res://Sprites/Wizard Walk Right.png"
+dest_files=["res://.godot/imported/Wizard Walk Right.png-a597d3b9ae91ed9da1171518525c3eff.ctex"]
 
 [params]
 

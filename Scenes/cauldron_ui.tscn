@@ -24,6 +24,13 @@ size_flags_vertical = 8
 mouse_filter = 2
 script = ExtResource("1_ri8xj")
 
+[node name="ComponentChecker" type="Area2D" parent="." unique_id=1680700161]
+z_index = 10
+position = Vector2(75, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ComponentChecker" unique_id=1886527340]
+shape = SubResource("RectangleShape2D_e36e1")
+
 [node name="Control" type="Control" parent="." unique_id=1238576188]
 layout_mode = 1
 anchors_preset = 8
@@ -117,12 +124,6 @@ offset_bottom = 32.0
 mouse_filter = 2
 color = Color(0.24705882, 1, 0.25490198, 1)
 
-[node name="Area2D" type="Area2D" parent="Control/ColorRect3" unique_id=1680700161]
-position = Vector2(31, 30)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Control/ColorRect3/Area2D" unique_id=1886527340]
-shape = SubResource("RectangleShape2D_e36e1")
-
 [node name="Label3" type="Label" parent="Control/ColorRect3" unique_id=1241695986]
 layout_mode = 0
 offset_left = 7.0
@@ -151,3 +152,7 @@ mouse_filter = 2
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=601199690]
 layer = 2
+
+[connection signal="body_entered" from="ComponentChecker" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="ComponentChecker" to="." method="_on_component_checker_body_exited"]
+[connection signal="pressed" from="Control/ColorRect3/Button" to="." method="_on_button_pressed"]

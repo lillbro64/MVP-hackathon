@@ -1,13 +1,14 @@
-extends Sprite2D
+extends Node2D
 
 var mouse_in = false
 var holding = false
+var sprite: String
 @export var comp_data: Component
 @export var in_stack: int
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	$Sprite.texture = load(sprite)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -22,7 +23,6 @@ func _process(_delta: float) -> void:
 
 func _on_area_2d_mouse_entered() -> void:
 	mouse_in = true
-	prints("yooooo")
 
 
 func _on_area_2d_mouse_exited() -> void:
