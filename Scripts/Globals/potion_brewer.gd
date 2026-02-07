@@ -6,6 +6,8 @@ var f_effect: String
 var effects: Array[String]
 var spec_effect: String
 
+var can_midas = false
+
 var total_potion_count: int
 
 # Called when the node enters the scene tree for the first time.
@@ -26,12 +28,23 @@ func brew_potion():
 	if f_effect == "HEAL":
 		potion.sprite = "res://Sprites/Potions/Health Potion.png"
 	elif f_effect == "ST-UP":
+		potion.name = "StaminaPotion"
 		potion.sprite = "res://Sprites/Potions/Stamina Potion.png"
 	elif f_effect == "SP-UP":
 		potion.sprite = "res://Sprites/Potions/Speed Potion.png"
 	elif f_effect == "H-UP":
 		potion.sprite = "res://Sprites/Potions/Medicine Potion.png"
-	if spec_effect == "":
+	elif "MIDAS" in f_effect && "TOUCH" in f_effect:
+		f_effect = "MIDASTOUCH"
+		potion.sprite = "res://Sprites/Potions/Midas Potion.png"
+		potion.name = "MIDAS"
+		potion.s_effect = "MIDAS"
+	elif "MONEYMONEYMONEYMONEY" in f_effect:
+		potion.sprite = "res://Sprites/Potions/Money Potion.png"
+		f_effect = "MONEY"
+		potion.name = "MoneyPotion"
+		potion.s_effect = "MIDAS"
+	else:
 		match randi_range(1, 5):
 			1:
 				potion.sprite = "res://Sprites/Potions/Health Potion.png"
@@ -55,6 +68,8 @@ func effect_handling():
 	elif potion_effect < 3:
 		@warning_ignore("narrowing_conversion")
 		potion_value = potion_value * 1.2
+	if potion_effect >= 10:
+		can_midas = true
 		
 	if !effects.is_empty():
 		for i in effects:
@@ -79,7 +94,20 @@ func effect_handling():
 					if effect_weight < 2:
 						effect_weight = 2
 						f_effect = "SP-UP"
-						
+				"gold":
+					if effect_weight < 10:
+						effect_weight = 10
+					if can_midas:
+						f_effect += "MIDAS"
+					else:
+						f_effect += "MONEY"
+				"finger":
+					if can_midas:
+						f_effect += "TOUCH"
+				"money":
+					if effect_weight < 6:
+						effect_weight = 6
+					f_effect += "MONEY"
 	brew_potion()
 
 func calculate_brew(components: Array[Component]):

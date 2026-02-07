@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://0jh41bgs7jvf"]
 
+[ext_resource type="Script" uid="uid://c7e505rjinjls" path="res://Scenes/chunk.gd" id="1_bp61h"]
 [ext_resource type="Texture2D" uid="uid://bm280md3fyu87" path="res://Sprites/Tilesets/Break Parts.png" id="1_byomg"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bp61h"]
@@ -9,9 +10,47 @@ region = Rect2(0, 0, 16.54515, 16.264866)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eat54"]
 size = Vector2(6, 6)
 
+[sub_resource type="Animation" id="Animation_s0xx0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_6qhn4"]
+resource_name = "fade_out"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(-0.033333335, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_erm1k"]
+_data = {
+&"RESET": SubResource("Animation_s0xx0"),
+&"fade_out": SubResource("Animation_6qhn4")
+}
+
 [node name="CrateChunk" type="RigidBody2D" unique_id=908871779]
 collision_layer = 0
 gravity_scale = 0.0
+script = ExtResource("1_bp61h")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=102941596]
 scale = Vector2(0.5, 0.5)
@@ -19,3 +58,12 @@ texture = SubResource("AtlasTexture_bp61h")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=556711969]
 shape = SubResource("RectangleShape2D_eat54")
+
+[node name="Timer" type="Timer" parent="." unique_id=1877710046]
+wait_time = 10.0
+autostart = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1698190461]
+libraries/ = SubResource("AnimationLibrary_erm1k")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

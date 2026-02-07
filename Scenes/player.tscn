@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bn6bgp7htt2l5" path="res://Scenes/cauldron_ui.tscn" id="3_6t5aa"]
 [ext_resource type="Texture2D" uid="uid://bnks7eo63o30f" path="res://Sprites/Wizard/Wizard Walk Left.png" id="4_8erm5"]
 [ext_resource type="Texture2D" uid="uid://b0dvf45oi1p84" path="res://Sprites/Wizard/Wizard Walk Right.png" id="5_f1ek2"]
-[ext_resource type="Script" uid="uid://bytk6bweq2gk" path="res://Scenes/ui_handler.gd" id="6_8erm5"]
+[ext_resource type="Script" uid="uid://bytk6bweq2gk" path="res://Scripts/ui_handler.gd" id="6_8erm5"]
 [ext_resource type="FontFile" uid="uid://cl6ww3fr48to3" path="res://Miscellaneous/Pixeled.ttf" id="8_8erm5"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tx1dd"]
@@ -258,7 +258,7 @@ autowrap_mode = 0
 horizontal_alignment = 2
 
 [node name="Timer" type="Timer" parent="AnimatedSprite2D/Camera2D/UIHandler" unique_id=1018369863]
-wait_time = 60.0
+wait_time = 300.0
 one_shot = true
 autostart = true
 

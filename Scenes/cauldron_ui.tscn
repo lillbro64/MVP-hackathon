@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bn6bgp7htt2l5"]
 
-[ext_resource type="Script" uid="uid://bqhqax471vyd4" path="res://Scenes/cauldron_ui.gd" id="1_ri8xj"]
+[ext_resource type="Script" uid="uid://bqhqax471vyd4" path="res://Scripts/cauldron_ui.gd" id="1_ri8xj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e36e1"]
 size = Vector2(60, 58)

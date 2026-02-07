@@ -13,6 +13,7 @@ var movement_vector: Vector2
 var p_stam = 100
 var s_cooldown = false
 var s_regen = false
+var known_s_max
 @export var p_speed = 1
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -20,10 +21,19 @@ func _ready() -> void:
 	s_bar = $AnimatedSprite2D/Camera2D/UIHandler/ColorRect/ColorRect2
 	s_timer = $AnimatedSprite2D/Camera2D/UIHandler/StamTimer
 	cauldron = load("res://Scenes/cauldron_ui.tscn")
+	known_s_max = 100
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(_delta: float) -> void:
+	if known_s_max != ComponentTracker.player_stam_max:
+		s_regen = true
+		known_s_max = ComponentTracker.player_stam_max
+	@warning_ignore("integer_division")
+	s_bar.size.x = int((p_stam / ComponentTracker.player_stam_max) * 100)
+	@warning_ignore("integer_division")
+	prints(p_stam)
+	prints(str((p_stam / ComponentTracker.player_stam_max) * 100))
 	if !can_move:
 		if Input.is_action_just_pressed("space"):
 			$AnimatedSprite2D/Camera2D/UIHandler/CauldronUI.visible = false
@@ -41,7 +51,9 @@ func _physics_process(_delta: float) -> void:
 				s_timer.start(2)
 				p_speed = 1 * ComponentTracker.player_speed_mod
 				p_stam -= 1
-				s_bar.size.x = p_stam
+				@warning_ignore("integer_division")
+				s_bar.size.x = int((p_stam / ComponentTracker.player_stam_max) * 100)
+				
 				if p_stam <= 0:
 					p_stam = 0
 					s_cooldown = true
@@ -115,7 +127,7 @@ func _physics_process(_delta: float) -> void:
 	if s_cooldown:
 		p_stam += 0.25
 		if step_decimals(p_stam) == 0:
-			s_bar.size.x = p_stam
+			s_bar.size.x = int((p_stam / ComponentTracker.player_stam_max) * 100)
 		if p_stam >= ComponentTracker.player_stam_max:
 			p_stam = ComponentTracker.player_stam_max
 			s_cooldown = false
@@ -125,7 +137,7 @@ func _physics_process(_delta: float) -> void:
 	elif s_regen:
 		p_stam += 0.5
 		if step_decimals(p_stam) == 0:
-			s_bar.size.x = p_stam
+			s_bar.size.x = int((p_stam / ComponentTracker.player_stam_max) * 100)
 		if p_stam >= ComponentTracker.player_stam_max:
 			p_stam = ComponentTracker.player_stam_max
 			s_regen = false

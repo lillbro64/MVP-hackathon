@@ -20,17 +20,25 @@ func _process(_delta: float) -> void:
 			queue_free()
 		self.global_position = (player_node.global_position - Vector2(0,16 + (8 * (in_stack - 1))))
 	if ComponentTracker.stack_changed:
+		component_data.stacked = false
 		restack()
 	
 
 func restack():
-	in_stack = ComponentTracker.component_stack.find(component_data) + 1
+	for i in ComponentTracker.component_stack:
+		if i.stacked:
+			continue
+		else:
+			if i == component_data:
+				in_stack = ComponentTracker.component_stack.find(i) + 1
+				break
 	await get_tree().process_frame
 	ComponentTracker.stack_changed = false
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		if ComponentTracker.component_total < ComponentTracker.component_max:
+			component_data.stacked = true
 			ComponentTracker.component_stack.append(component_data)
 			ComponentTracker.component_total += 1
 			in_stack = ComponentTracker.component_total

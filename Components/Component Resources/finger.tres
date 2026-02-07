@@ -6,4 +6,5 @@
 script = ExtResource("1_cqwo7")
 sprite = "res://Sprites/Components/Mysterious Finger.png"
 potion_impact = 10.0
+special_impact = "finger"
 metadata/_custom_type_script = "uid://ccvmdj7sxgwwy"

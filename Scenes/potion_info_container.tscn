@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b23mtt26b50ap"]
 
 [ext_resource type="Texture2D" uid="uid://cwk1svfleevti" path="res://Sprites/Potions/Empty Alternate Potion.png" id="1_eb5qs"]
-[ext_resource type="Script" uid="uid://bu45wtcow5us1" path="res://Scenes/potion_info_container.gd" id="1_wo5x8"]
+[ext_resource type="Script" uid="uid://bu45wtcow5us1" path="res://Scripts/potion_info_container.gd" id="1_wo5x8"]
 [ext_resource type="FontFile" uid="uid://rq77o21821pu" path="res://Miscellaneous/Retro Gaming.ttf" id="3_obuuc"]
 [ext_resource type="FontFile" uid="uid://cl6ww3fr48to3" path="res://Miscellaneous/Pixeled.ttf" id="4_lbnom"]
 

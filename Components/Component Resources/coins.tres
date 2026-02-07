@@ -7,4 +7,5 @@ script = ExtResource("1_0qxp1")
 sprite = "res://Sprites/Components/Coins.png"
 value = 20
 potion_impact = -1.0
+special_impact = "money"
 metadata/_custom_type_script = "uid://ccvmdj7sxgwwy"

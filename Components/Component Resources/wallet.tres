@@ -6,4 +6,5 @@
 script = ExtResource("1_i4n2h")
 sprite = "res://Sprites/Components/Wallet.png"
 value = 40
+special_impact = "money"
 metadata/_custom_type_script = "uid://ccvmdj7sxgwwy"
