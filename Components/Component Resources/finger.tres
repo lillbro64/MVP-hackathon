@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Component" format=3 uid="uid://buqjap8exat6v"]
+
+[ext_resource type="Script" uid="uid://ccvmdj7sxgwwy" path="res://Components/base_component.gd" id="1_cqwo7"]
+
+[resource]
+script = ExtResource("1_cqwo7")
+sprite = "res://Sprites/Components/Mysterious Finger.png"
+potion_impact = 10.0
+metadata/_custom_type_script = "uid://ccvmdj7sxgwwy"

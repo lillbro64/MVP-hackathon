@@ -3,13 +3,13 @@
 [ext_resource type="Texture2D" uid="uid://dsoxsi85q1kg3" path="res://Sprites/Tilesets/Ground Tiles.png" id="1_r8bcl"]
 [ext_resource type="PackedScene" uid="uid://1tl7sn1mrcr7" path="res://Scenes/player.tscn" id="2_1qnfl"]
 [ext_resource type="Texture2D" uid="uid://dh2hktc4xcpmm" path="res://Sprites/Tilesets/Obstacles.png" id="2_rlidi"]
-[ext_resource type="PackedScene" uid="uid://cfkg1wy2moc8l" path="res://Components/component.tscn" id="3_m34ki"]
-[ext_resource type="Script" uid="uid://ccvmdj7sxgwwy" path="res://Components/base_component.gd" id="5_1qnfl"]
 [ext_resource type="Texture2D" uid="uid://5djonvshcosh" path="res://Sprites/Wizard/Cauldron.png" id="6_rlidi"]
 [ext_resource type="Script" uid="uid://b2rgpwp6kvyaf" path="res://Scenes/cauldron.gd" id="7_1qnfl"]
 [ext_resource type="Script" uid="uid://cwixyhxd6t5md" path="res://Scenes/submit.gd" id="8_urrcd"]
 [ext_resource type="Script" uid="uid://b5dyll0qsbei5" path="res://Scenes/results.gd" id="9_5h7oy"]
 [ext_resource type="FontFile" uid="uid://cl6ww3fr48to3" path="res://Miscellaneous/Pixeled.ttf" id="9_puebw"]
+[ext_resource type="PackedScene" uid="uid://couivbhp67hqt" path="res://Scenes/component_spawner.tscn" id="10_5h7oy"]
+[ext_resource type="PackedScene" uid="uid://jese17bamfr7" path="res://Scenes/crate.tscn" id="11_ltefv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1qnfl"]
 texture = ExtResource("1_r8bcl")
@@ -86,32 +86,9 @@ texture = ExtResource("2_rlidi")
 0:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSet" id="TileSet_puebw"]
-physics_layer_0/collision_layer = 1
+physics_layer_0/collision_layer = 3
 sources/0 = SubResource("TileSetAtlasSource_1qnfl")
 sources/1 = SubResource("TileSetAtlasSource_urrcd")
-
-[sub_resource type="Resource" id="Resource_1qnfl"]
-script = ExtResource("5_1qnfl")
-sprite = "res://Sprites/Components/Leaf.png"
-value = 2
-potion_impact = 0.4
-metadata/_custom_type_script = "uid://ccvmdj7sxgwwy"
-
-[sub_resource type="Resource" id="Resource_urrcd"]
-script = ExtResource("5_1qnfl")
-sprite = "res://Sprites/Components/Branch.png"
-value = 3
-potion_impact = 0.2
-special_impact = "nullify"
-metadata/_custom_type_script = "uid://ccvmdj7sxgwwy"
-
-[sub_resource type="Resource" id="Resource_puebw"]
-script = ExtResource("5_1qnfl")
-sprite = "res://Sprites/Components/Mushroom.png"
-value = 8
-potion_impact = 0.5
-special_impact = "health"
-metadata/_custom_type_script = "uid://ccvmdj7sxgwwy"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1qnfl"]
 atlas = ExtResource("6_rlidi")
@@ -172,18 +149,6 @@ tile_set = SubResource("TileSet_puebw")
 [node name="AnimatedSprite2D" parent="Player" index="0" unique_id=954142346]
 y_sort_enabled = true
 
-[node name="Component" parent="." unique_id=846461734 instance=ExtResource("3_m34ki")]
-position = Vector2(-62, -8)
-component_data = SubResource("Resource_1qnfl")
-
-[node name="Component2" parent="." unique_id=1350341653 instance=ExtResource("3_m34ki")]
-position = Vector2(-33, -37)
-component_data = SubResource("Resource_urrcd")
-
-[node name="Component3" parent="." unique_id=1471013275 instance=ExtResource("3_m34ki")]
-position = Vector2(-42, 29)
-component_data = SubResource("Resource_puebw")
-
 [node name="Cauldron" type="AnimatedSprite2D" parent="." unique_id=302348823]
 z_index = -1
 position = Vector2(0, -32)
@@ -243,6 +208,36 @@ horizontal_alignment = 1
 [node name="Timer" type="Timer" parent="ColorRect" unique_id=790333237]
 wait_time = 3.0
 one_shot = true
+
+[node name="Crate" parent="." unique_id=1916662388 instance=ExtResource("11_ltefv")]
+position = Vector2(95, -57)
+
+[node name="Crate2" parent="." unique_id=906127361 instance=ExtResource("11_ltefv")]
+position = Vector2(-69, -185)
+
+[node name="Crate3" parent="." unique_id=1824936528 instance=ExtResource("11_ltefv")]
+position = Vector2(-23, 54)
+
+[node name="Crate4" parent="." unique_id=1657770393 instance=ExtResource("11_ltefv")]
+position = Vector2(-139, 197)
+
+[node name="Crate5" parent="." unique_id=1437898949 instance=ExtResource("11_ltefv")]
+position = Vector2(70, 226)
+
+[node name="ComponentSpawner" parent="." unique_id=1121724569 instance=ExtResource("10_5h7oy")]
+position = Vector2(-67, 143)
+
+[node name="ComponentSpawner2" parent="." unique_id=241890174 instance=ExtResource("10_5h7oy")]
+position = Vector2(111, 72)
+
+[node name="ComponentSpawner3" parent="." unique_id=823306609 instance=ExtResource("10_5h7oy")]
+position = Vector2(-98, -45)
+
+[node name="ComponentSpawner4" parent="." unique_id=840961631 instance=ExtResource("10_5h7oy")]
+position = Vector2(68, -150)
+
+[node name="ComponentSpawner5" parent="." unique_id=1275232463 instance=ExtResource("10_5h7oy")]
+position = Vector2(-8, 245)
 
 [connection signal="body_entered" from="Cauldron/Area2D" to="Cauldron" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Cauldron/Area2D" to="Cauldron" method="_on_area_2d_body_exited"]

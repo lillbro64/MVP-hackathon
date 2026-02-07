@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Component" format=3 uid="uid://i3dhe2e7c1yf"]
+
+[ext_resource type="Script" uid="uid://ccvmdj7sxgwwy" path="res://Components/base_component.gd" id="1_tt6f2"]
+
+[resource]
+script = ExtResource("1_tt6f2")
+sprite = "res://Sprites/Components/Nail.png"
+value = 5
+potion_impact = -0.7
+special_impact = "nullify"
+metadata/_custom_type_script = "uid://ccvmdj7sxgwwy"

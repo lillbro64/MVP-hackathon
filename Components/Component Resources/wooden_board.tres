@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Component" format=3 uid="uid://bp4ndra5jndvr"]
+
+[ext_resource type="Script" uid="uid://ccvmdj7sxgwwy" path="res://Components/base_component.gd" id="1_a5t4n"]
+
+[resource]
+script = ExtResource("1_a5t4n")
+sprite = "res://Sprites/Components/Wood Plank.png"
+value = 4
+potion_impact = -0.1
+special_impact = "nullify"
+metadata/_custom_type_script = "uid://ccvmdj7sxgwwy"

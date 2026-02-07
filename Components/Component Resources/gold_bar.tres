@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Component" format=3 uid="uid://ns5rastfov22"]
+
+[ext_resource type="Script" uid="uid://ccvmdj7sxgwwy" path="res://Components/base_component.gd" id="1_mf6yn"]
+
+[resource]
+script = ExtResource("1_mf6yn")
+sprite = "res://Sprites/Components/Gold Bar.png"
+value = 100
+potion_impact = -3.0
+metadata/_custom_type_script = "uid://ccvmdj7sxgwwy"

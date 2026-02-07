@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Component" format=3 uid="uid://bmwhwt026toww"]
+
+[ext_resource type="Script" uid="uid://ccvmdj7sxgwwy" path="res://Components/base_component.gd" id="1_vc8pq"]
+
+[resource]
+script = ExtResource("1_vc8pq")
+sprite = "res://Sprites/Components/Silver Bar.png"
+value = 40
+potion_impact = -3.0
+metadata/_custom_type_script = "uid://ccvmdj7sxgwwy"

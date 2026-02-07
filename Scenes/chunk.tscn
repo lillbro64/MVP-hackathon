@@ -1,6 +1,10 @@
 [gd_scene format=3 uid="uid://0jh41bgs7jvf"]
 
-[ext_resource type="Texture2D" uid="uid://bo8dwfo4jvdh7" path="res://PlaceholderAssets/Visuals/TinyArrow.png" id="1_byomg"]
+[ext_resource type="Texture2D" uid="uid://bm280md3fyu87" path="res://Sprites/Tilesets/Break Parts.png" id="1_byomg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bp61h"]
+atlas = ExtResource("1_byomg")
+region = Rect2(0, 0, 16.54515, 16.264866)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eat54"]
 size = Vector2(6, 6)
@@ -10,7 +14,8 @@ collision_layer = 0
 gravity_scale = 0.0
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=102941596]
-texture = ExtResource("1_byomg")
+scale = Vector2(0.5, 0.5)
+texture = SubResource("AtlasTexture_bp61h")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=556711969]
 shape = SubResource("RectangleShape2D_eat54")

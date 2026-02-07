@@ -10,7 +10,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	if ComponentTracker.has_won:
-		global_position = get_tree().get_root().find_child("Player", true, false).global_position
+		global_position = get_tree().get_root().find_child("Player", true, false).global_position + Vector2(-62, -20)
 		visible = true
 		$RichTextLabel.text = "SCORE: " + str(ComponentTracker.player_value) + "
 HIGH SCORE: " + str(Saver.SaveFile.high_score)
@@ -20,7 +20,7 @@ HIGH SCORE: " + str(Saver.SaveFile.high_score)
 			timer_started = true
 	
 	if ComponentTracker.has_lost:
-		global_position = get_tree().get_root().find_child("Player", true, false).global_position
+		global_position = get_tree().get_root().find_child("Player", true, false).global_position + Vector2(-62, -20)
 		visible = true
 		$RichTextLabel.text = "You lose. :("
 		if !timer_started:
@@ -31,4 +31,5 @@ HIGH SCORE: " + str(Saver.SaveFile.high_score)
 
 func _on_timer_timeout() -> void:
 	prints("aaaaaaaaa")
-	get_tree().change_scene_to_packed(load("res://Scenes/title.tscn"))
+	#get_tree().change_scene_to_packed(load("res://Scenes/title.tscn"))
+	get_tree().change_scene_to_file("res://Scenes/title.tscn")
