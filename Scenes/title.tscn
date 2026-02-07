@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bnks7eo63o30f" path="res://Sprites/Wizard/Wizard Walk Left.png" id="4_6aagf"]
 [ext_resource type="FontFile" uid="uid://rq77o21821pu" path="res://Miscellaneous/Retro Gaming.ttf" id="5_kyk5u"]
 [ext_resource type="FontFile" uid="uid://cl6ww3fr48to3" path="res://Miscellaneous/Pixeled.ttf" id="6_cwqts"]
+[ext_resource type="Texture2D" uid="uid://bobr27xy1b07h" path="res://Sprites/Wizard/Logo.png" id="8_yu0ss"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tx1dd"]
 atlas = ExtResource("1_2qdx2")
@@ -180,12 +181,13 @@ animations = [{
 script = ExtResource("1_3eqdi")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1859617631]
-position = Vector2(210, 90)
-scale = Vector2(7.5, 7.5)
+position = Vector2(230.99998, 123)
+scale = Vector2(4.3125005, 4.3125005)
 sprite_frames = SubResource("SpriteFrames_th2ad")
 frame_progress = 0.32315227
 
 [node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1449609513]
+visible = false
 offset_left = 3.0
 offset_right = 172.0
 offset_bottom = 89.0
@@ -220,6 +222,11 @@ theme_override_fonts/normal_font = ExtResource("6_cwqts")
 theme_override_font_sizes/normal_font_size = 10
 text = "High Score: 0"
 autowrap_mode = 0
+
+[node name="Logo" type="Sprite2D" parent="." unique_id=806824182]
+position = Vector2(109, 40)
+scale = Vector2(2, 2)
+texture = ExtResource("8_yu0ss")
 
 [connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]

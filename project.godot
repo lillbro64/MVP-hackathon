@@ -13,7 +13,7 @@ config_version=5
 config/name="MVP Hackathon"
 run/main_scene="uid://cwlkje64h6oci"
 config/features=PackedStringArray("4.6", "GL Compatibility")
-config/icon="res://icon.svg"
+config/icon="uid://de4vpykywd2b7"
 
 [autoload]
 
