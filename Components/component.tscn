@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://cfkg1wy2moc8l"]
+
+[ext_resource type="Script" uid="uid://bv1wnaeohcsqf" path="res://Scripts/component_pickup.gd" id="1_1l2aw"]
+[ext_resource type="Texture2D" uid="uid://b34hwsivqbdp" path="res://PlaceholderAssets/Visuals/CoralChunk2.png" id="2_auism"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0m7cd"]
+radius = 3.1622777
+
+[node name="Component" type="Area2D" unique_id=846461734]
+script = ExtResource("1_1l2aw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=154182946]
+shape = SubResource("CircleShape2D_0m7cd")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=685981964]
+texture = ExtResource("2_auism")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://jese17bamfr7"]
+
+[ext_resource type="Script" uid="uid://cgv4bsj125da1" path="res://Scripts/crate.gd" id="1_i4r3v"]
+[ext_resource type="Texture2D" uid="uid://seughjtsmto2" path="res://PlaceholderAssets/Visuals/WarnBox.png" id="2_rdp7h"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_xuee5"]
+bounce = 0.5
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xuee5"]
+
+[node name="Crate" type="RigidBody2D" unique_id=1916662388]
+collision_mask = 2
+mass = 0.2
+physics_material_override = SubResource("PhysicsMaterial_xuee5")
+gravity_scale = 0.0
+can_sleep = false
+script = ExtResource("1_i4r3v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1703445023]
+shape = SubResource("RectangleShape2D_xuee5")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=435927771]
+texture = ExtResource("2_rdp7h")

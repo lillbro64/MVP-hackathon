@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Component" format=3 uid="uid://tyu3vt5ph5ml"]
+
+[ext_resource type="Script" uid="uid://ccvmdj7sxgwwy" path="res://Components/base_component.gd" id="1_dfbck"]
+
+[resource]
+script = ExtResource("1_dfbck")
+sprite = "res://PlaceholderAssets/Visuals/CoralChunk2.png"
+metadata/_custom_type_script = "uid://ccvmdj7sxgwwy"

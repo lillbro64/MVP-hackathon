@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://1tl7sn1mrcr7"]
 
-[ext_resource type="Script" uid="uid://bccqd23w3qn2w" path="res://player.gd" id="1_onrkg"]
+[ext_resource type="Script" uid="uid://bccqd23w3qn2w" path="res://Scripts/player.gd" id="1_onrkg"]
 [ext_resource type="Texture2D" uid="uid://dvwoc440dulje" path="res://PlaceholderAssets/Visuals/GBSabelOverworld1-export.png" id="2_i3pqv"]
+[ext_resource type="PackedScene" uid="uid://bn6bgp7htt2l5" path="res://Scenes/cauldron_ui.tscn" id="3_6t5aa"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0m7cd"]
 atlas = ExtResource("2_i3pqv")
@@ -135,8 +136,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_td3eq"]
-size = Vector2(16, 16)
+[sub_resource type="CircleShape2D" id="CircleShape2D_onrkg"]
 
 [node name="Player" type="CharacterBody2D" unique_id=1289873781]
 script = ExtResource("1_onrkg")
@@ -173,7 +173,21 @@ color = Color(0, 1, 0.38039216, 1)
 
 [node name="StamTimer" type="Timer" parent="AnimatedSprite2D/Camera2D/UIHandler" unique_id=279510379]
 
+[node name="CauldronUI" parent="AnimatedSprite2D/Camera2D/UIHandler" unique_id=739318511 instance=ExtResource("3_6t5aa")]
+visible = false
+z_index = 200
+layout_mode = 1
+offset_left = -40.0
+offset_top = -40.0
+offset_right = -40.0
+offset_bottom = -40.0
+
+[node name="CanvasLayer" parent="AnimatedSprite2D/Camera2D/UIHandler/CauldronUI" index="1" unique_id=601199690]
+visible = false
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1967057914]
-shape = SubResource("RectangleShape2D_td3eq")
+shape = SubResource("CircleShape2D_onrkg")
 
 [connection signal="timeout" from="AnimatedSprite2D/Camera2D/UIHandler/StamTimer" to="." method="_on_stam_timer_timeout"]
+
+[editable path="AnimatedSprite2D/Camera2D/UIHandler/CauldronUI"]

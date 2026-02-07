@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://0jh41bgs7jvf"]
+
+[ext_resource type="Texture2D" uid="uid://bo8dwfo4jvdh7" path="res://PlaceholderAssets/Visuals/TinyArrow.png" id="1_byomg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eat54"]
+size = Vector2(6, 6)
+
+[node name="CrateChunk" type="RigidBody2D" unique_id=908871779]
+collision_layer = 0
+gravity_scale = 0.0
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=102941596]
+texture = ExtResource("1_byomg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=556711969]
+shape = SubResource("RectangleShape2D_eat54")
