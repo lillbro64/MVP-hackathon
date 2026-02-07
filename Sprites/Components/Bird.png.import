@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bnks7eo63o30f"
-path="res://.godot/imported/Wizard Walk Left.png-89cd8cce619520e5340b5338aeba6b8b.ctex"
+uid="uid://cuqu5qkkpbhij"
+path="res://.godot/imported/Bird.png-4985eefb18d959af8c05f6d32ee62a90.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Wizard Walk Left.png"
-dest_files=["res://.godot/imported/Wizard Walk Left.png-89cd8cce619520e5340b5338aeba6b8b.ctex"]
+source_file="res://Sprites/Components/Bird.png"
+dest_files=["res://.godot/imported/Bird.png-4985eefb18d959af8c05f6d32ee62a90.ctex"]
 
 [params]
 

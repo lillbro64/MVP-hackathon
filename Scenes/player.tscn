@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://1tl7sn1mrcr7"]
 
 [ext_resource type="Script" uid="uid://bccqd23w3qn2w" path="res://Scripts/player.gd" id="1_onrkg"]
-[ext_resource type="Texture2D" uid="uid://s6k5ya5ygna5" path="res://Sprites/Wizard Walk Backward.png" id="2_x3wgy"]
-[ext_resource type="Texture2D" uid="uid://8jktiyl5gnnd" path="res://Sprites/Wizard Walk Forward.png" id="3_3smsa"]
+[ext_resource type="Texture2D" uid="uid://s6k5ya5ygna5" path="res://Sprites/Wizard/Wizard Walk Backward.png" id="2_x3wgy"]
+[ext_resource type="Texture2D" uid="uid://8jktiyl5gnnd" path="res://Sprites/Wizard/Wizard Walk Forward.png" id="3_3smsa"]
 [ext_resource type="PackedScene" uid="uid://bn6bgp7htt2l5" path="res://Scenes/cauldron_ui.tscn" id="3_6t5aa"]
-[ext_resource type="Texture2D" uid="uid://bnks7eo63o30f" path="res://Sprites/Wizard Walk Left.png" id="4_8erm5"]
-[ext_resource type="Texture2D" uid="uid://b0dvf45oi1p84" path="res://Sprites/Wizard Walk Right.png" id="5_f1ek2"]
+[ext_resource type="Texture2D" uid="uid://bnks7eo63o30f" path="res://Sprites/Wizard/Wizard Walk Left.png" id="4_8erm5"]
+[ext_resource type="Texture2D" uid="uid://b0dvf45oi1p84" path="res://Sprites/Wizard/Wizard Walk Right.png" id="5_f1ek2"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tx1dd"]
 atlas = ExtResource("2_x3wgy")

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b2ni1bofb3kim"
-path="res://.godot/imported/Speed Potion.png-38eaaed3e92733ceb82fb4088ca89625.ctex"
+uid="uid://bx4cojy7ub7ue"
+path="res://.godot/imported/Cauldron.png-3dee939466d46518ad52f97ea4cba00d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Speed Potion.png"
-dest_files=["res://.godot/imported/Speed Potion.png-38eaaed3e92733ceb82fb4088ca89625.ctex"]
+source_file="res://Sprites/Components/Cauldron.png"
+dest_files=["res://.godot/imported/Cauldron.png-3dee939466d46518ad52f97ea4cba00d.ctex"]
 
 [params]
 

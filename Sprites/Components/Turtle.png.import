@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cnbki68i0vly0"
-path="res://.godot/imported/Medicine Potion.png-21d56a1c40b6d77a123f754bed4c8367.ctex"
+uid="uid://cwyqp8kj6hvx"
+path="res://.godot/imported/Turtle.png-fd8de8be9bdba0bdab9fd083cebbb66b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Medicine Potion.png"
-dest_files=["res://.godot/imported/Medicine Potion.png-21d56a1c40b6d77a123f754bed4c8367.ctex"]
+source_file="res://Sprites/Components/Turtle.png"
+dest_files=["res://.godot/imported/Turtle.png-fd8de8be9bdba0bdab9fd083cebbb66b.ctex"]
 
 [params]
 

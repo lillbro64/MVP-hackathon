@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bwbu4jy8oxg65"
-path="res://.godot/imported/Mundane Potion.png-08edccd9599b8c26d0de928a5bab6d22.ctex"
+uid="uid://dm830pfd7q0jd"
+path="res://.godot/imported/Coins.png-bb1e4b01fe612e598ce70afd81f72bde.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Mundane Potion.png"
-dest_files=["res://.godot/imported/Mundane Potion.png-08edccd9599b8c26d0de928a5bab6d22.ctex"]
+source_file="res://Sprites/Components/Coins.png"
+dest_files=["res://.godot/imported/Coins.png-bb1e4b01fe612e598ce70afd81f72bde.ctex"]
 
 [params]
 

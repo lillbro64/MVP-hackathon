@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://8jktiyl5gnnd"
-path="res://.godot/imported/Wizard Walk Forward.png-cf4c410decbd76118e0eeaf7118ecd1f.ctex"
+uid="uid://de4vpykywd2b7"
+path="res://.godot/imported/Health Potion.png-b67c613038aac9509b75c52d61e461b7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Wizard Walk Forward.png"
-dest_files=["res://.godot/imported/Wizard Walk Forward.png-cf4c410decbd76118e0eeaf7118ecd1f.ctex"]
+source_file="res://Sprites/Potions/Health Potion.png"
+dest_files=["res://.godot/imported/Health Potion.png-b67c613038aac9509b75c52d61e461b7.ctex"]
 
 [params]
 

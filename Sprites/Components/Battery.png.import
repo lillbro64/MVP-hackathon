@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bj7mc4krcm1im"
-path="res://.godot/imported/Poison Potion.png-5bdae8dad8101b135f16906490b836f6.ctex"
+uid="uid://cpx2d5pg0quwr"
+path="res://.godot/imported/Battery.png-bffa80fca02993d5d2ff9862ca85ef3d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Poison Potion.png"
-dest_files=["res://.godot/imported/Poison Potion.png-5bdae8dad8101b135f16906490b836f6.ctex"]
+source_file="res://Sprites/Components/Battery.png"
+dest_files=["res://.godot/imported/Battery.png-bffa80fca02993d5d2ff9862ca85ef3d.ctex"]
 
 [params]
 

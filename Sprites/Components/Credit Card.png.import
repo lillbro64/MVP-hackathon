@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://caewgfj3x1w6h"
-path="res://.godot/imported/Mana Potion.png-eb5effd8a2ceb2b817d3ee1de37e2764.ctex"
+uid="uid://h725ont2i6q3"
+path="res://.godot/imported/Credit Card.png-15aee7c43bef9da04d404e248b05c2ca.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Mana Potion.png"
-dest_files=["res://.godot/imported/Mana Potion.png-eb5effd8a2ceb2b817d3ee1de37e2764.ctex"]
+source_file="res://Sprites/Components/Credit Card.png"
+dest_files=["res://.godot/imported/Credit Card.png-15aee7c43bef9da04d404e248b05c2ca.ctex"]
 
 [params]
 

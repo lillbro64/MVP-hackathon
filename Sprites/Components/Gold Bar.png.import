@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://de4vpykywd2b7"
-path="res://.godot/imported/Health Potion.png-1016c1db6e829bedd883003285565f6e.ctex"
+uid="uid://dlalj1y5rgxm0"
+path="res://.godot/imported/Gold Bar.png-f6d0508e0b1fdc287eb36c257f42d833.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Health Potion.png"
-dest_files=["res://.godot/imported/Health Potion.png-1016c1db6e829bedd883003285565f6e.ctex"]
+source_file="res://Sprites/Components/Gold Bar.png"
+dest_files=["res://.godot/imported/Gold Bar.png-f6d0508e0b1fdc287eb36c257f42d833.ctex"]
 
 [params]
 

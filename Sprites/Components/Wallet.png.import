@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cf4lucnru3bj5"
-path="res://.godot/imported/Stamina Potion.png-17dc78f3d87b54403a388e68b604cbcb.ctex"
+uid="uid://b3k1pkym24hgi"
+path="res://.godot/imported/Wallet.png-637bd584c5a6afbbc16e737327092474.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Stamina Potion.png"
-dest_files=["res://.godot/imported/Stamina Potion.png-17dc78f3d87b54403a388e68b604cbcb.ctex"]
+source_file="res://Sprites/Components/Wallet.png"
+dest_files=["res://.godot/imported/Wallet.png-637bd584c5a6afbbc16e737327092474.ctex"]
 
 [params]
 

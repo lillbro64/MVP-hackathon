@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://s6k5ya5ygna5"
-path="res://.godot/imported/Wizard Walk Backward.png-a1d82584c0499d1e40486dde33537c13.ctex"
+uid="uid://7vsik6g0fjfq"
+path="res://.godot/imported/Glass Shards.png-61f961b23c817a451fe7ed240ee99d96.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Wizard Walk Backward.png"
-dest_files=["res://.godot/imported/Wizard Walk Backward.png-a1d82584c0499d1e40486dde33537c13.ctex"]
+source_file="res://Sprites/Components/Glass Shards.png"
+dest_files=["res://.godot/imported/Glass Shards.png-61f961b23c817a451fe7ed240ee99d96.ctex"]
 
 [params]
 
